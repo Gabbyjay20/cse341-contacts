@@ -1,7 +1,40 @@
 ### Get all contacts
-GET http://localhost:3000/contacts
+GET https://cse341-contacts-7fxp.onrender.com/contacts
 
 ###
 
 ### Get one contact
-GET http://localhost:3000/contacts/single?id=6a9e73b832cb1f797a989cb4
+GET https://cse341-contacts-7fxp.onrender.com/contacts/single?id=6a9e73b832cb1f797a989cb4
+
+###
+
+### Create a new contact
+POST https://cse341-contacts-7fxp.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "Rest",
+  "email": "test.rest@example.com",
+  "favoriteColor": "Orange",
+  "birthday": "2000-02-20"
+}
+
+###
+
+### Update a contact
+PUT https://cse341-contacts-7fxp.onrender.com/contacts/6aaac9c5c3d9849be7eea9db
+Content-Type: application/json
+
+{
+  "firstName": "Daniel",
+  "lastName": "Williams",
+  "email": "daniel.williams@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1994-09-12"
+}
+
+###
+
+### Delete a contact
+DELETE https://cse341-contacts-7fxp.onrender.com/contacts/6aaac9c5c3d9849be7eea9db
